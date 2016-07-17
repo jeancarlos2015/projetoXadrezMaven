@@ -14,5 +14,14 @@ public class Rainha extends AbstractPeca{
     public Rainha() {
         super("D","B");
     }
-    
+    @Override
+    public int[] getPosicoes(){
+        
+        if(getCor().equals("B")){
+            int vetor[] = {40};
+            return vetor;
+        }
+        int vetor[] = {47};
+        return vetor;
+    }
 }

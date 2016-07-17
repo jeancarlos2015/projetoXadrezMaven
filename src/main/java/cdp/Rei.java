@@ -14,5 +14,14 @@ public class Rei extends AbstractPeca{
     public Rei() {
         super("R","B");
     }
-    
+    @Override
+    public int[] getPosicoes(){
+        
+        if(getCor().equals("B")){
+            int vetor[] = {30};
+            return vetor;
+        }
+        int vetor[] = {37};
+        return vetor;
+    }
 }

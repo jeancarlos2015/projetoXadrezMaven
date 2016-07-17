@@ -15,21 +15,49 @@ import cdp.Tabuleiro;
  */
 public class PecaTabuleiro {
     private Tabuleiro tabuleiro;
-    private InterfacePeca peca;
     private final PecaManager manager;
     
-    public PecaTabuleiro(){
+    public PecaTabuleiro(Tabuleiro tabuleiro){
         manager = new PecaManager();
+        this.tabuleiro = tabuleiro;
     }
     public void setTabuleiro(Tabuleiro tabuleiro){
         this.tabuleiro = tabuleiro;
     }
-    public void carregaPecasPretas(){
-        
+    
+    final void colocaPecaAux(InterfacePeca peca){
+        for(Integer posicao: peca.getPosicoes()){
+            tabuleiro.seleciona(posicao);
+            tabuleiro.colocaNoTabuleiro(peca);
+        }
     }
-    public void carregaPecasBrancas(){
-       tabuleiro.seleciona(11);
-       peca = manager.criaBispo();
-       tabuleiro.colocaNoTabuleiro(peca);
+    
+    final void colocaPecas(InterfacePeca peca){
+        peca.setCor("B");
+        colocaPecaAux(peca);
+        peca.setCor("P");
+        colocaPecaAux(peca);
     }
+    
+    public InterfacePeca[] getPecas(){
+        InterfacePeca[] pecas = {
+            manager.criaBispo(),
+            manager.criaCavalo(),
+            manager.criaPiaoBranco(),
+            manager.criaRainha(),
+            manager.criaRei(),
+            manager.criaTorre(),
+            manager.criaPiaoPreto()
+        };
+        return pecas;
+    }
+  
+    
+    public void carregaPecas(){
+        for(InterfacePeca peca1:getPecas()){
+            colocaPecas(peca1);
+        }
+    }
+    
+    
 }

@@ -15,4 +15,14 @@ public class Cavalo extends AbstractPeca{
         super("C","B");
     }
     
+    @Override
+    public int[] getPosicoes(){
+        
+        if(getCor().equals("B")){
+            int vetor[] = {10,60};
+            return vetor;
+        }
+        int vetor[] = {17,67};
+        return vetor;
+    }
 }

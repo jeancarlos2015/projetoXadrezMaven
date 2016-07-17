@@ -18,7 +18,7 @@ public class Tabuleiro {
     private Posicao[][] tabuleiro;
     private int posicao_inteiro;
     private static Tabuleiro instance;
-    private InterfacePeca peca;
+   
     
     public Tabuleiro(){
         tabuleiro = new Posicao[8][8];
@@ -38,7 +38,10 @@ public class Tabuleiro {
             }
         }
     }
-
+    final int getLinha(){return posicao_inteiro/10;}
+    
+    final int getColuna(){return posicao_inteiro%10;}
+    
     /**
      * @return the posicao
      */
@@ -58,16 +61,11 @@ public class Tabuleiro {
     }
 
     public void colocaNoTabuleiro(InterfacePeca peca){
-        Posicao p = tabuleiro[posicao_inteiro/10][posicao_inteiro%10];
-        System.out.println(p.isEmpty());
+        
+        tabuleiro[getLinha()][getColuna()].setPeca(peca);
     }
 
-    /**
-     * @param peca the peca to set
-     */
-    public void setPeca(InterfacePeca peca) {
-        this.peca = peca;
-    }
+   
     
     
 }

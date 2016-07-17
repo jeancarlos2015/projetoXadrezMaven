@@ -19,10 +19,7 @@ public class AbstractPeca implements InterfacePeca{
         this.cor = cor;
     }
     
-    @Override
-    public void movimenta() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public void setPosicao(int posicao) {
@@ -43,6 +40,9 @@ public class AbstractPeca implements InterfacePeca{
     public void setCor(String cor) {
         this.cor = cor;
     }
+    
+    @Override
+    public int[] getPosicoes(){return null;}
     
     @Override
     public Object clone(){
@@ -69,5 +69,10 @@ public class AbstractPeca implements InterfacePeca{
      */
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public boolean isMoviment() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

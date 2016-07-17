@@ -15,4 +15,9 @@ public class PiaoPreto extends AbstractPeca{
         super("P", "P");
     }
     
+    @Override
+    public int[] getPosicoes(){
+        int vetor[] = {6,16,26,36,46,56,66,76};
+        return vetor;
+    }
 }

@@ -16,6 +16,17 @@ public class Bispo extends AbstractPeca{
         
     }
     
+    @Override
+    public int[] getPosicoes(){
+        
+        if(getCor().equals("B")){
+            int vetor[] = {20,50};
+            return vetor;
+        }
+        int vetor[] = {27,57};
+        return vetor;
+    }
+    
     
     
 }

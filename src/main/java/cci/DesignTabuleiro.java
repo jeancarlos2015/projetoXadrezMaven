@@ -17,8 +17,9 @@ public class DesignTabuleiro {
     private Tabuleiro tabuleiro;
     private final EntradaSaida saida;
     
-    public DesignTabuleiro(){
+    public DesignTabuleiro(Tabuleiro tabuleiro){
         saida = new EntradaSaida();
+        this.tabuleiro = tabuleiro;
     }
     
     final void desenha_aux(int posicao_inteiro, Posicao posicao){
@@ -28,7 +29,7 @@ public class DesignTabuleiro {
         if(linha>0 && coluna>0){}
         if(linha%2==0){
             if(coluna%2==0){
-                posicao.setCor(simbol.replace(".", " "));
+                posicao.setCor(simbol.replace("..", "  "));
             }else{
                 posicao.setCor(simbol);
             }
@@ -36,7 +37,7 @@ public class DesignTabuleiro {
             if(coluna%2==0){
                 posicao.setCor(simbol);
             }else{
-                posicao.setCor(simbol.replace(".", " "));
+                posicao.setCor(simbol.replace("..", "  "));
             }
         }
     }
@@ -47,10 +48,10 @@ public class DesignTabuleiro {
     public void desenhaTabuleiro(){
         for(int linha=0;linha<8;linha++){
             for(int coluna=0;coluna<8;coluna++){
-                getTabuleiro().seleciona(coluna*10+linha);
+                tabuleiro.seleciona(coluna*10+linha);
                 Posicao posicao = new Posicao();
                 desenha_aux(coluna*10+linha, posicao);
-                getTabuleiro().preenche(posicao);
+                tabuleiro.preenche(posicao);
             }
         }
     }
@@ -59,8 +60,8 @@ public class DesignTabuleiro {
         for(int linha=0;linha<8;linha++){
             saida.imprime("\n");
             for(int coluna=0;coluna<8;coluna++){
-                getTabuleiro().seleciona(coluna*10+linha);
-                Posicao posicao = getTabuleiro().getPosicao();
+                tabuleiro.seleciona(coluna*10+linha);
+                Posicao posicao = tabuleiro.getPosicao();
                 saida.imprime(posicao.getCor());
             }
         }

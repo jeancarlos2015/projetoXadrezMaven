@@ -14,5 +14,14 @@ public class Torre extends AbstractPeca{
     public Torre() {
         super("T","B");
     }
-    
+    @Override
+    public int[] getPosicoes(){
+        
+        if(getCor().equals("B")){
+            int vetor[] = {0,70};
+            return vetor;
+        }
+        int vetor[] = {07,77};
+        return vetor;
+    }
 }
