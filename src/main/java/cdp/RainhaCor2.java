@@ -9,15 +9,15 @@ package cdp;
  *
  * @author jean
  */
-public class PiaoPreto extends AbstractPeca{
+public class RainhaCor2 extends RainhaAbstract{
     
-    public PiaoPreto() {
-        super("P", "P");
+    public RainhaCor2() {
+        super("D", "P");
     }
     
     @Override
     public int[] getPosicoes(){
-        int vetor[] = {6,16,26,36,46,56,66,76};
+        int vetor[] = {57};
         return vetor;
     }
 }

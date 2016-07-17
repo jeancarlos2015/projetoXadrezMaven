@@ -9,19 +9,15 @@ package cdp;
  *
  * @author jean
  */
-public class Rainha extends AbstractPeca{
+public class CavaloCor1 extends CavaloAbstract{
     
-    public Rainha() {
-        super("D","B");
+    public CavaloCor1() {
+        super("C","B");
     }
+    
     @Override
     public int[] getPosicoes(){
-        
-        if(getCor().equals("B")){
-            int vetor[] = {40};
-            return vetor;
-        }
-        int vetor[] = {47};
+        int vetor[] = {20,70};
         return vetor;
     }
 }

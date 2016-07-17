@@ -15,13 +15,13 @@ public class Tabuleiro {
      * @return the instance
      */
     
-    private Posicao[][] tabuleiro;
+    private final Posicao[][] tabuleiro;
     private int posicao_inteiro;
     private static Tabuleiro instance;
    
     
     public Tabuleiro(){
-        tabuleiro = new Posicao[8][8];
+        tabuleiro = new Posicao[9][9];
     }
     
     public synchronized static Tabuleiro getInstance() {
@@ -32,8 +32,8 @@ public class Tabuleiro {
     }
     
     public void inicializa(){
-        for(int linha=0;linha<8;linha++){
-            for(int coluna=0;coluna<8;coluna++){
+        for(int linha=0;linha<9;linha++){
+            for(int coluna=0;coluna<9;coluna++){
                 tabuleiro[coluna][linha] = new Posicao();
             }
         }
@@ -57,6 +57,7 @@ public class Tabuleiro {
     }
     
     public void preenche(Posicao posicao){
+        posicao.habilitar();
         tabuleiro[posicao_inteiro/10][posicao_inteiro%10] = posicao;
     }
 

@@ -9,19 +9,15 @@ package cdp;
  *
  * @author jean
  */
-public class Torre extends AbstractPeca{
+public class TorreCor2 extends TorreAbstract{
     
-    public Torre() {
-        super("T","B");
+    public TorreCor2() {
+        super("T", "P");
     }
+    
     @Override
     public int[] getPosicoes(){
-        
-        if(getCor().equals("B")){
-            int vetor[] = {0,70};
-            return vetor;
-        }
-        int vetor[] = {07,77};
+        int vetor[] = {17,87};
         return vetor;
     }
 }

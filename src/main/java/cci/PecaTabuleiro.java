@@ -25,29 +25,31 @@ public class PecaTabuleiro {
         this.tabuleiro = tabuleiro;
     }
     
-    final void colocaPecaAux(InterfacePeca peca){
+    final void colocaPecas(InterfacePeca peca){
         for(Integer posicao: peca.getPosicoes()){
             tabuleiro.seleciona(posicao);
             tabuleiro.colocaNoTabuleiro(peca);
         }
     }
-    
-    final void colocaPecas(InterfacePeca peca){
-        peca.setCor("B");
-        colocaPecaAux(peca);
-        peca.setCor("P");
-        colocaPecaAux(peca);
-    }
+  
     
     public InterfacePeca[] getPecas(){
         InterfacePeca[] pecas = {
-            manager.criaBispo(),
-            manager.criaCavalo(),
-            manager.criaPiaoBranco(),
-            manager.criaRainha(),
-            manager.criaRei(),
-            manager.criaTorre(),
-            manager.criaPiaoPreto()
+            
+            manager.criaBispoCor1(),
+            manager.criaCavaloCor1(),
+            manager.criaPiaoCor1(),
+            manager.criaRainhaCor1(),
+            manager.criaReiCor1(),
+            manager.criaTorreCor1(),
+            
+            manager.criaBispoCor2(),
+            manager.criaCavaloCor2(),
+            manager.criaPiaoCor2(),
+            manager.criaRainhaCor2(),
+            manager.criaReiCor2(),
+            manager.criaTorreCor2()
+            
         };
         return pecas;
     }

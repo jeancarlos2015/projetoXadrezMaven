@@ -11,7 +11,7 @@ package cdp;
  */
 public class Posicao {
     private String cor = "";
-    private boolean situacao = true;
+    private boolean situacao = false;
     private InterfacePeca peca = null;
 
     /**

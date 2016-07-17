@@ -10,43 +10,71 @@ package cdp;
  * @author jean
  */
 public class PecaManager {
-    private final InterfacePeca piaoBranco,piaoPreto,rei,rainha,torre,bispo,cavalo;
-    
+    private final InterfacePeca piaoCor1,reiCor1,rainhaCor1,torreCor1,bispoCor1,cavaloCor1;
+    private final InterfacePeca piaoCor2,reiCor2,rainhaCor2,torreCor2,bispoCor2,cavaloCor2;
     public PecaManager(){
-        piaoBranco = new PiaoBranco();
-        piaoPreto = new PiaoPreto();
-        rei = new Rei();
-        rainha = new Rainha();
-        torre = new Torre();
-        bispo = new Bispo();
-        cavalo = new Cavalo();
+        piaoCor1 = new PiaoCor1();
+        reiCor1 = new ReiCor1();
+        rainhaCor1 = new RainhaCor1();
+        torreCor1 = new TorreCor1();
+        bispoCor1 = new BispoCor1();
+        cavaloCor1 = new CavaloCor1();
+        
+        piaoCor2 = new PiaoCor2();
+        reiCor2 = new ReiCor2();
+        rainhaCor2 = new RainhaCor2();
+        torreCor2 = new TorreCor2();
+        bispoCor2 = new BispoCor2();
+        cavaloCor2 = new CavaloCor2();
     }
     
-    public InterfacePeca criaPiaoBranco(){
-        return (InterfacePeca) piaoBranco.clone();
+    public InterfacePeca criaPiaoCor1(){
+        return (InterfacePeca) piaoCor1.clone();
     }
     
-    public InterfacePeca criaPiaoPreto(){
-        return (InterfacePeca) piaoPreto.clone();
+    public InterfacePeca criaReiCor1(){
+        return (InterfacePeca) reiCor1.clone();
     }
     
-    public InterfacePeca criaRei(){
-        return (InterfacePeca) rei.clone();
+    public InterfacePeca criaRainhaCor1(){
+        return (InterfacePeca) rainhaCor1.clone();
     }
     
-    public InterfacePeca criaRainha(){
-        return (InterfacePeca) rainha.clone();
+    public InterfacePeca criaTorreCor1(){
+        return (InterfacePeca) torreCor1.clone();
     }
     
-    public InterfacePeca criaTorre(){
-        return (InterfacePeca) torre.clone();
+    public InterfacePeca criaBispoCor1(){
+        return (InterfacePeca) bispoCor1.clone();
     }
     
-    public InterfacePeca criaBispo(){
-        return (InterfacePeca) bispo.clone();
+    public InterfacePeca criaCavaloCor1(){
+        return (InterfacePeca) cavaloCor1.clone();
     }
     
-    public InterfacePeca criaCavalo(){
-        return (InterfacePeca) cavalo.clone();
+    
+   
+    public InterfacePeca criaPiaoCor2(){
+        return (InterfacePeca) piaoCor2.clone();
+    }
+    
+    public InterfacePeca criaReiCor2(){
+        return (InterfacePeca) reiCor2.clone();
+    }
+    
+    public InterfacePeca criaRainhaCor2(){
+        return (InterfacePeca) rainhaCor2.clone();
+    }
+    
+    public InterfacePeca criaTorreCor2(){
+        return (InterfacePeca) torreCor2.clone();
+    }
+    
+    public InterfacePeca criaBispoCor2(){
+        return (InterfacePeca) bispoCor2.clone();
+    }
+    
+    public InterfacePeca criaCavaloCor2(){
+        return (InterfacePeca) cavaloCor2.clone();
     }
 }

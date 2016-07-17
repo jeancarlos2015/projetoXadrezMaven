@@ -7,7 +7,7 @@ package maven.projeto.xadrez;
 
 import cci.DesignTabuleiro;
 import cci.PecaTabuleiro;
-import cdp.Bispo;
+import cdp.BispoCor1;
 import cdp.Posicao;
 import cdp.Tabuleiro;
 
@@ -25,8 +25,6 @@ public class Cliente {
         tabuleiro.inicializa();
         DesignTabuleiro design = new DesignTabuleiro(tabuleiro);
         PecaTabuleiro pecaTabuleiro = new PecaTabuleiro(tabuleiro);
-        
-        
         design.desenhaTabuleiro();
         pecaTabuleiro.carregaPecas();
         design.imprimeTabuleiro();

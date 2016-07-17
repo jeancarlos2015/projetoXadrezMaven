@@ -9,24 +9,15 @@ package cdp;
  *
  * @author jean
  */
-public class Bispo extends AbstractPeca{
+public class PiaoCor1 extends PiaoAbstract{
     
-    public Bispo() {
-        super("B","B");
-        
+    public PiaoCor1() {
+        super("P", "B");
     }
     
     @Override
     public int[] getPosicoes(){
-        
-        if(getCor().equals("B")){
-            int vetor[] = {20,50};
-            return vetor;
-        }
-        int vetor[] = {27,57};
+        int vetor[] = {11,21,31,41,51,61,71,81};
         return vetor;
     }
-    
-    
-    
 }

@@ -19,18 +19,6 @@ public class AbstractPeca implements InterfacePeca{
         this.cor = cor;
     }
     
-    
-
-    @Override
-    public void setPosicao(int posicao) {
-        this.posicao = posicao;
-    }
-
-    @Override
-    public int getPosicao() {
-        return posicao;
-    }
-
     @Override
     public String getCor() {
         return cor;
