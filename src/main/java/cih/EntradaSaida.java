@@ -26,6 +26,17 @@ public class EntradaSaida {
     
     public String lerPosicao(){
         String posicao = sc.nextLine();
-        return posicao;
+        char[] keys = posicao.toCharArray();
+        String buffer = "";
+        for(int p=0;p<keys.length/2;p++){
+            buffer += keys[p];
+        }
+        buffer += " ";
+        for(int p=keys.length/2;p<keys.length;p++){
+            buffer += keys[p];
+        }
+        
+        return buffer;
     }
+    
 }

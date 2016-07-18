@@ -13,6 +13,7 @@ import cdp.JogadorCor1;
 import cdp.JogadorCor2;
 import cdp.Posicao;
 import cdp.Tabuleiro;
+import java.util.Arrays;
 
 /**
  *
@@ -28,6 +29,7 @@ public class Cliente {
         JogadorCor1 jogador1 = new JogadorCor1("joao", "B");
         JogadorCor2 jogador2 = new JogadorCor2("Rafael", "P");
         jogo.iniciar(jogador1, jogador2);
+      
    /*
         Tabuleiro tabuleiro = Tabuleiro.getInstance();
         tabuleiro.inicializa();
