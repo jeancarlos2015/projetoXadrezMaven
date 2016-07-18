@@ -18,7 +18,7 @@ public class Jogo {
     private final Tabuleiro tabuleiro;
     private final DesignTabuleiro design;
     private final PecaTabuleiro controlePecas;
-    private EntradaSaida saida_entrada;
+    private final EntradaSaida saida_entrada;
     private String msg;
     private String cor1, cor2;
     

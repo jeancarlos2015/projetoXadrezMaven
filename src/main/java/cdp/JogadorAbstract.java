@@ -5,6 +5,8 @@
  */
 package cdp;
 
+import util.TrataString;
+
 /**
  *
  * @author jean
@@ -19,35 +21,33 @@ public abstract class JogadorAbstract implements JogadorInterface{
     private Tabuleiro tabuleiro;
     private boolean selecionou;
     private String msg;
+    private TrataString trata;
     public JogadorAbstract(String nome, String cor){
         this.selecionou = false;
         this.nome = nome;
         this.cor = cor;
+        trata = new TrataString();
     }
     
     public void move(String posicao){
-        String[] posicoes = posicao.split(" ");
-        int origem = Integer.parseInt(posicoes[0])+10;
-        int destino = Integer.parseInt(posicoes[1])+10;
-        tabuleiro.seleciona(origem);
+        trata.setPosicao(posicao);
+        tabuleiro.seleciona(trata.getOrigem());
         Posicao p  = tabuleiro.getPosicao();
         peca = p.getPeca();
         p.setPeca(null);
-        tabuleiro.seleciona(destino);
+        tabuleiro.seleciona(trata.getDestino());
         tabuleiro.colocaNoTabuleiro(peca);
     }
     
     public void movimentar(String posicao){
-        String[] posicoes = posicao.split(" ");
-        int origem = Integer.parseInt(posicoes[0])+10;
-        int destino = Integer.parseInt(posicoes[1])+10;
+        trata.setPosicao(posicao);
         if(selecionou){
             if(peca.andar(posicao)){
                 move(posicao);
-                setMsg(peca.getNome()+ "     " + origem + " andou para " +destino);
+                setMsg(peca.getNome()+ "     " + trata.getOrigem() + " andou para " +trata.getDestino());
             }
             else if(peca.capturar(posicao)){
-                setMsg(peca.getNome()+"      "+ origem + "capturou " + capturada.getNome()+ " em "+ destino);
+                setMsg(peca.getNome()+"      "+ trata.getOrigem() + "capturou " + capturada.getNome()+ " em "+ trata.getDestino());
             }
         }
     }
@@ -55,9 +55,8 @@ public abstract class JogadorAbstract implements JogadorInterface{
     
     
     public void selecionar(String posicao){
-        String[] posicoes = posicao.split(" ");
-        int origem = Integer.parseInt(posicoes[0])+10;
-        tabuleiro.seleciona(origem);
+        trata.setPosicao(posicao);
+        tabuleiro.seleciona(trata.getOrigem());
         posicao_tabuleiro = tabuleiro.getPosicao();
         if(!posicao_tabuleiro.isEmpty()){
             peca = posicao_tabuleiro.getPeca();

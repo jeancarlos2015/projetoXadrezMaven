@@ -15,4 +15,13 @@ public abstract class RainhaAbstract extends AbstractPeca{
         super(nome, cor);
     }
     
+    @Override
+    public boolean andar(String posicao){
+        return true;
+    }
+    
+    @Override
+    public boolean capturar(String posicao){
+        return true;
+    }
 }
