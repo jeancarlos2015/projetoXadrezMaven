@@ -11,8 +11,8 @@ package cdp;
  */
 public class CavaloCor1 extends CavaloAbstract{
     
-    public CavaloCor1() {
-        super("C","B");
+    public CavaloCor1(String cor) {
+        super("C",cor);
     }
     
     @Override

@@ -9,7 +9,7 @@ package cdp;
  *
  * @author jean
  */
-public class ReiAbstract extends AbstractPeca{
+public abstract class ReiAbstract extends AbstractPeca{
     
     public ReiAbstract(String nome, String cor) {
         super(nome, cor);

@@ -15,12 +15,13 @@ import cdp.Tabuleiro;
  */
 public class PecaTabuleiro {
     private Tabuleiro tabuleiro;
-    private final PecaManager manager;
+    private PecaManager manager;
     
     public PecaTabuleiro(Tabuleiro tabuleiro){
-        manager = new PecaManager();
         this.tabuleiro = tabuleiro;
     }
+    
+    
     public void setTabuleiro(Tabuleiro tabuleiro){
         this.tabuleiro = tabuleiro;
     }
@@ -55,7 +56,8 @@ public class PecaTabuleiro {
     }
   
     
-    public void carregaPecas(){
+    public void carregaPecas(String cor1, String cor2){
+        manager = new PecaManager(cor1,cor2);
         for(InterfacePeca peca1:getPecas()){
             colocaPecas(peca1);
         }

@@ -11,8 +11,8 @@ package cdp;
  */
 public class BispoCor2 extends BispoAbstract{
     
-    public BispoCor2() {
-        super("B", "P");
+    public BispoCor2(String cor) {
+        super("B", cor);
     }
  @Override
     public int[] getPosicoes(){

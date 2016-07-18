@@ -9,10 +9,11 @@ package cdp;
  *
  * @author jean
  */
-public class PiaoAbstract extends AbstractPeca{
+public abstract class PiaoAbstract extends AbstractPeca{
     
     public PiaoAbstract(String nome, String cor) {
         super(nome, cor);
     }
+    
     
 }

@@ -22,7 +22,7 @@ public class DesignTabuleiro {
         this.tabuleiro = tabuleiro;
     }
     
-    final void desenha_aux(int posicao_inteiro, Posicao posicao){
+    final void desenha_campos_tabuleiro(int posicao_inteiro, Posicao posicao){
         int linha = posicao_inteiro%10;
         int coluna = posicao_inteiro/10;
         String simbol = "   ..   ";
@@ -40,6 +40,7 @@ public class DesignTabuleiro {
             }
         }
     }
+    
     final void desenhaPosicao(int posicao, String simbolo1){
         String simbol = "   ..   ";
         tabuleiro.seleciona(posicao);
@@ -53,7 +54,7 @@ public class DesignTabuleiro {
         }
         desenhaPosicao(8, "  ");
         for(int posicao=1;posicao<9;posicao++){
-            desenhaPosicao(posicao*10+8, "0"+(posicao-1));
+            desenhaPosicao(posicao*10+8,""+ (posicao-1)+"0");
         }
     }
 
@@ -62,7 +63,7 @@ public class DesignTabuleiro {
             for(int coluna=1;coluna<=8;coluna++){
                 tabuleiro.seleciona(coluna*10+linha);
                 Posicao posicao = new Posicao();
-                desenha_aux(coluna*10+linha, posicao);
+                desenha_campos_tabuleiro(coluna*10+linha, posicao);
                 tabuleiro.preenche(posicao);
             }
         }

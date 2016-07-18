@@ -11,8 +11,8 @@ package cdp;
  */
 public class RainhaCor2 extends RainhaAbstract{
     
-    public RainhaCor2() {
-        super("D", "P");
+    public RainhaCor2(String cor) {
+        super("D", cor);
     }
     
     @Override

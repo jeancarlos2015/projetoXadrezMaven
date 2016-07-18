@@ -9,10 +9,8 @@ package cdp;
  *
  * @author jean
  */
-public abstract class CavaloAbstract extends AbstractPeca{
-    
-    public CavaloAbstract(String nome, String cor) {
-        super(nome, cor);
-    }
+public interface JogadorInterface {
+    public void joga(String posicao);
+    public void setTabuleiro(Tabuleiro tabuleiro);
     
 }

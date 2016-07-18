@@ -11,8 +11,8 @@ package cdp;
  */
 public class TorreCor2 extends TorreAbstract{
     
-    public TorreCor2() {
-        super("T", "P");
+    public TorreCor2(String cor) {
+        super("T", cor);
     }
     
     @Override

@@ -9,7 +9,7 @@ package cdp;
  *
  * @author jean
  */
-public class BispoAbstract extends AbstractPeca{
+public abstract class BispoAbstract extends AbstractPeca{
     
     public BispoAbstract(String nome, String cor) {
         super(nome, cor);

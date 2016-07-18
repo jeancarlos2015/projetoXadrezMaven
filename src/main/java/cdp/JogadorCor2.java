@@ -9,6 +9,10 @@ package cdp;
  *
  * @author jean
  */
-public class Jogo {
+public class JogadorCor2 extends JogadorAbstract{
+    
+    public JogadorCor2(String nome, String cor) {
+        super(nome, cor);
+    }
     
 }

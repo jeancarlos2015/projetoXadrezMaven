@@ -11,8 +11,8 @@ package cdp;
  */
 public class PiaoCor1 extends PiaoAbstract{
     
-    public PiaoCor1() {
-        super("P", "B");
+    public PiaoCor1(String cor) {
+        super("P", cor);
     }
     
     @Override

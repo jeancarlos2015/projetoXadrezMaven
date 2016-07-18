@@ -11,8 +11,8 @@ package cdp;
  */
 public class ReiCor1 extends ReiAbstract{
     
-    public ReiCor1() {
-        super("R","B");
+    public ReiCor1(String cor) {
+        super("R",cor);
     }
     @Override
     public int[] getPosicoes(){

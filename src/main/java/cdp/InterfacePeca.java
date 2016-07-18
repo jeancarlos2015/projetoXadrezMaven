@@ -10,11 +10,12 @@ package cdp;
  * @author jean
  */
 public interface InterfacePeca extends Cloneable{
-    public boolean  isMoviment();
+    
     public String   getCor();
     public void     setCor(String cor);
     public Object   clone();
     public String   getNome();
     public int[]    getPosicoes();
-    
+    public boolean andar(String posicao);
+    public boolean capturar(String posicao);
 }

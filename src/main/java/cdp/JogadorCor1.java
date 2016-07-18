@@ -9,9 +9,9 @@ package cdp;
  *
  * @author jean
  */
-public abstract class CavaloAbstract extends AbstractPeca{
+public class JogadorCor1 extends JogadorAbstract{
     
-    public CavaloAbstract(String nome, String cor) {
+    public JogadorCor1(String nome, String cor) {
         super(nome, cor);
     }
     

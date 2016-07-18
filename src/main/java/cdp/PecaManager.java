@@ -12,20 +12,20 @@ package cdp;
 public class PecaManager {
     private final InterfacePeca piaoCor1,reiCor1,rainhaCor1,torreCor1,bispoCor1,cavaloCor1;
     private final InterfacePeca piaoCor2,reiCor2,rainhaCor2,torreCor2,bispoCor2,cavaloCor2;
-    public PecaManager(){
-        piaoCor1 = new PiaoCor1();
-        reiCor1 = new ReiCor1();
-        rainhaCor1 = new RainhaCor1();
-        torreCor1 = new TorreCor1();
-        bispoCor1 = new BispoCor1();
-        cavaloCor1 = new CavaloCor1();
+    public PecaManager(String cor1, String cor2){
+        piaoCor1 = new PiaoCor1(cor1);
+        reiCor1 = new ReiCor1(cor1);
+        rainhaCor1 = new RainhaCor1(cor1);
+        torreCor1 = new TorreCor1(cor1);
+        bispoCor1 = new BispoCor1(cor1);
+        cavaloCor1 = new CavaloCor1(cor1);
         
-        piaoCor2 = new PiaoCor2();
-        reiCor2 = new ReiCor2();
-        rainhaCor2 = new RainhaCor2();
-        torreCor2 = new TorreCor2();
-        bispoCor2 = new BispoCor2();
-        cavaloCor2 = new CavaloCor2();
+        piaoCor2 = new PiaoCor2(cor2);
+        reiCor2 = new ReiCor2(cor2);
+        rainhaCor2 = new RainhaCor2(cor2);
+        torreCor2 = new TorreCor2(cor2);
+        bispoCor2 = new BispoCor2(cor2);
+        cavaloCor2 = new CavaloCor2(cor2);
     }
     
     public InterfacePeca criaPiaoCor1(){

@@ -59,8 +59,15 @@ public class AbstractPeca implements InterfacePeca{
         this.nome = nome;
     }
 
+    
+
     @Override
-    public boolean isMoviment() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean andar(String posicao) {
+        return true;
+    }
+
+    @Override
+    public boolean capturar(String posicao) {
+        return true;
     }
 }

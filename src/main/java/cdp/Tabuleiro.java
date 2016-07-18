@@ -38,6 +38,7 @@ public class Tabuleiro {
             }
         }
     }
+    
     final int getLinha(){return posicao_inteiro/10;}
     
     final int getColuna(){return posicao_inteiro%10;}
@@ -57,12 +58,10 @@ public class Tabuleiro {
     }
     
     public void preenche(Posicao posicao){
-        posicao.habilitar();
         tabuleiro[posicao_inteiro/10][posicao_inteiro%10] = posicao;
     }
 
     public void colocaNoTabuleiro(InterfacePeca peca){
-        
         tabuleiro[getLinha()][getColuna()].setPeca(peca);
     }
 

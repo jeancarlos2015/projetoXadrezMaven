@@ -11,8 +11,8 @@ package cdp;
  */
 public class TorreCor1 extends AbstractPeca{
     
-    public TorreCor1() {
-        super("T","B");
+    public TorreCor1(String cor) {
+        super("T",cor);
     }
     
     @Override

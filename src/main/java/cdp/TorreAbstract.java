@@ -9,7 +9,7 @@ package cdp;
  *
  * @author jean
  */
-public class TorreAbstract extends AbstractPeca{
+public abstract class TorreAbstract extends AbstractPeca{
     
     public TorreAbstract(String nome, String cor) {
         super(nome, cor);

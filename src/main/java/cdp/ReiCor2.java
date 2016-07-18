@@ -11,8 +11,8 @@ package cdp;
  */
 public class ReiCor2 extends ReiAbstract{
 
-    public ReiCor2() {
-        super("R", "P");
+    public ReiCor2(String cor) {
+        super("R", cor);
     }
     
     

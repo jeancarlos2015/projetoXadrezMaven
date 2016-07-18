@@ -11,8 +11,8 @@ package cdp;
  */
 public class BispoCor1 extends BispoAbstract{
     
-    public BispoCor1() {
-        super("B","B");
+    public BispoCor1(String cor) {
+        super("B",cor);
         
     }
     
